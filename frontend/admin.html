@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Panel</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="global.css">
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-dark px-3">
+  <span class="navbar-brand fw-bold">Admin Panel</span>
+  <button class="btn btn-outline-light btn-sm" onclick="logout()">Logout</button>
+</nav>
+
+<div class="container my-4">
+
+  <!-- Services CRUD -->
+  <div class="card p-4 mb-4">
+    <h5>Manage Services</h5>
+    <div class="row g-2 mb-3">
+      <div class="col-md-4">
+        <input type="text" id="svc-name" class="form-control" placeholder="Service name" />
+      </div>
+      <div class="col-md-4">
+        <input type="text" id="svc-desc" class="form-control" placeholder="Description" />
+      </div>
+      <div class="col-md-2">
+        <input type="number" id="svc-duration" class="form-control" placeholder="Mins" value="30" />
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-success w-100" onclick="createService()">Add Service</button>
+      </div>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-sm table-bordered">
+        <thead class="table-light">
+          <tr><th>Name</th><th>Description</th><th>Duration</th><th>Actions</th></tr>
+        </thead>
+        <tbody id="services-table"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Appointments -->
+  <div class="card p-4">
+    <h5>All Appointments</h5>
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover align-middle">
+        <thead class="table-light">
+          <tr><th>User</th><th>Service</th><th>Date</th><th>Time</th><th>Status</th><th>Action</th></tr>
+        </thead>
+        <tbody id="all-appointments-table"></tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<script src="function/admin.js"></script>
+</body>
+</html>
