@@ -1,0 +1,12 @@
+body { background: #f3f3f5; 
+font-family: "Calibri", Times, serif;}
+    
+.card { 
+    border: none; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1); 
+}
+
+.primary-colour{
+    color: rgba(47, 77, 138, 0.1);
+}
